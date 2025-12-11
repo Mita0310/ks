@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kecantikan SMKN 2 Baleendah</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Animasi hover tombol */
+        .btn-hover:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-white font-bold text-2xl tracking-wide">Kecantikan</h1>
+
+            <ul class="hidden md:flex gap-8 text-white font-medium">
+                <li><a href="#hero" class="hover:text-pink-400 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-pink-400 transition">Tentang</a></li>
+                <li><a href="#gallery" class="hover:text-pink-400 transition">Galeri</a></li>
+                <li><a href="#contact" class="hover:text-pink-400 transition">Kontak</a></li>
+            </ul>
+
+            <button id="hamburger" class="md:hidden text-white text-3xl">☰</button>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden flex-col bg-black/80 text-white space-y-4 px-6 py-4 md:hidden">
+            <a href="#hero">Home</a>
+            <a href="#about">Tentang</a>
+            <a href="#gallery">Galeri</a>
+            <a href="#contact">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero"
+        class="relative min-h-screen flex items-center justify-center text-center px-6 py-20 overflow-hidden">
+
+        <div id="parallax-bg" class="absolute inset-0 bg-cover bg-center transition-transform duration-75"
+            style="background-image: url('asset/img/bg.jpg')"></div>
+
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <div class="relative z-10 max-w-3xl text-white" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-extrabold drop-shadow-xl">
+                Jurusan Kecantikan<br />
+                <span class="text-pink-400">SMKN 2 Baleendah</span>
+            </h1>
+
+            <a href="#about"
+                class="mt-8 inline-block bg-pink-500 hover:bg-pink-600 px-8 py-3 text-white font-semibold rounded-full shadow-lg transition transform btn-hover">
+                Lihat Kegiatan Praktik
+            </a>
+        </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+            <div data-aos="fade-right">
+                <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-6">Jurusan Kecantikan</h2>
+
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                    Jurusan Kecantikan (KS) SMKN 2 Baleendah mempelajari dua bidang, yaitu kecantikan kulit dan
+                    kecantikan rambut. Siswa belajar facial, mani–pedi, rias wajah, body massage, waxing, serta
+                    berbagai teknik rambut seperti potong, pewarnaan, creambath, penataan, dan sanggul.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold text-pink-500">Jurusan ini berdiri sejak 1994</span> dan hadir untuk
+                    memenuhi kebutuhan masyarakat yang ingin menekuni bidang kecantikan. KS berkomitmen menciptakan
+                    lulusan yang terampil, percaya diri, dan siap bekerja maupun berwirausaha.
+                </p>
+            </div>
+
+            <div data-aos="fade-left">
+                <img src="asset/img/fotojurusankecantikan.jpg" class="rounded-2xl shadow-xl w-full object-cover" />
+            </div>
+
+        </div>
+    </section>
+
+    <!-- KEGIATAN SISWA -->
+    <section id="gallery" class="py-20 px-6 bg-pink-50">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-pink-600 mb-12" data-aos="fade-up">
+            Kegiatan Siswa
+        </h2>
+
+        <!-- TAB BUTTONS -->
+        <div class="flex justify-center gap-4 mb-12">
+            <button
+                class="tab-btn px-6 py-2 border rounded-full text-pink-600 border-pink-400 font-semibold hover:bg-pink-100 transition btn-hover"
+                data-tab="tab-hair">Rambut</button>
+
+            <button
+                class="tab-btn px-6 py-2 border rounded-full text-pink-600 border-pink-400 font-semibold hover:bg-pink-100 transition btn-hover"
+                data-tab="tab-skin">Wajah</button>
+
+            <button
+                class="tab-btn px-6 py-2 border rounded-full text-pink-600 border-pink-400 font-semibold hover:bg-pink-100 transition btn-hover"
+                data-tab="tab-nails">Kuku</button>
+        </div>
+
+        <!-- TAB CONTENT WRAPPER -->
+        <div class="max-w-6xl mx-auto space-y-20">
+
+            <!-- RAMBUT -->
+            <div id="tab-hair" class="tab-content hidden space-y-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-right">
+                    <img src="asset/img/potong.jpeg" class="rounded-2xl shadow-xl w-full max-w-[220px] mx-auto" />
+                    <div>
+                        <h3 class="text-2xl font-bold text-pink-600 mb-3">Potong Rambut</h3>
+                        <p class="text-gray-700 leading-relaxed">Siswa mempelajari teknik haircut dari basic hingga
+                            modern.</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-left">
+                    <div>
+                        <h3 class="text-2xl font-bold text-pink-600 mb-3">Pewarnaan Rambut</h3>
+                        <p class="text-gray-700 leading-relaxed">Teknik pewarnaan profesional seperti bleaching,
+                            highlight, dan fashion color.</p>
+                    </div>
+                    <img src="asset/img/rambut.jpeg" class="rounded-2xl shadow-xl w-full max-w-[220px] mx-auto" />
+                </div>
+            </div>
+
+            <!-- WAJAH -->
+            <div id="tab-skin" class="tab-content hidden space-y-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-right">
+                    <div>
+                        <h3 class="text-2xl font-bold text-pink-600 mb-3">Facial Wajah</h3>
+                        <p class="text-gray-700 leading-relaxed">Teknik pembersihan wajah, scrubbing, massage, dan
+                            masker.</p>
+                    </div>
+                    <img src="asset/img/wajah.jpeg" class="rounded-2xl shadow-xl w-full max-w-[220px] mx-auto" />
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-left">
+                    <img src="asset/img/mekup.jpeg" class="rounded-2xl shadow-xl w-full max-w-[220px] mx-auto" />
+                    <div>
+                        <h3 class="text-2xl font-bold text-pink-600 mb-3">Rias Karakter</h3>
+                        <p class="text-gray-700 leading-relaxed">Makeup karakter untuk pertunjukan panggung dan seni.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KUKU -->
+            <div id="tab-nails" class="tab-content hidden space-y-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                    <img src="asset/img/kuku.jpeg" class="rounded-2xl shadow-xl w-full max-w-[220px] mx-auto" />
+                    <div>
+                        <h3 class="text-2xl font-bold text-pink-600 mb-3">Manicure & Pedicure</h3>
+                        <p class="text-gray-700 leading-relaxed">Perawatan kuku, scrub, massage, dan pewarnaan kuku
+                            estetik.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STAFF -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+
+            <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-10" data-aos="fade-up">Daftar Staff</h2>
+
+            <ul class="bg-pink-50 rounded-2xl shadow-lg p-8 space-y-4 text-lg text-gray-700" data-aos="fade-up"
+                data-aos-delay="100">
+                <li class="flex items-center gap-3"><span class="w-3 h-3 bg-pink-600 rounded-full"></span>Ningrumsari,
+                    S.Pd</li>
+                <li class="flex items-center gap-3"><span class="w-3 h-3 bg-pink-600 rounded-full"></span>Wiwi
+                    Winingsih, S.Pd</li>
+                <li class="flex items-center gap-3"><span class="w-3 h-3 bg-pink-600 rounded-full"></span>Ida Ismara,
+                    S.Pd</li>
+                <li class="flex items-center gap-3"><span class="w-3 h-3 bg-pink-600 rounded-full"></span>Dra. Evi
+                    Devianti</li>
+                <li class="flex items-center gap-3"><span class="w-3 h-3 bg-pink-600 rounded-full"></span>Tolmen Risma
+                    Aulia</li>
+            </ul>
+
+            <div class="mt-10 flex justify-center" data-aos="zoom-in">
+                <img src="asset/img/staff.jpeg" class="rounded-2xl shadow-xl w-1/2 object-cover" />
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-pink-200 text-pink-900 py-10 mt-10">
+        <div class="max-w-6xl mx-auto px-5">
+
+            <h2 class="text-center text-2xl font-semibold mb-6" data-aos="fade-up">Kontak SMKN 2 Baleendah</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-lg">
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/smkn2be?igsh=MWxrY3VwdHI0bXZyZw=="
+                    class="bg-pink-300 hover:bg-pink-400 p-4 rounded-xl block transition shadow btn-hover"
+                    data-aos="fade-up">
+                    <p class="font-semibold">Instagram</p>
+                    <p class="text-sm">@smkn2be</p>
+                </a>
+
+                <!-- WHATSAPP -->
+                <a href="https://wa.me/6281321644007"
+                    class="bg-pink-300 hover:bg-pink-400 p-4 rounded-xl block transition shadow btn-hover"
+                    data-aos="fade-up" data-aos-delay="50">
+                    <p class="font-semibold">WhatsApp</p>
+                    <p class="text-sm">+62 821 1518 3893</p>
+                </a>
+
+                <!-- EMAIL -->
+                <a href="mailto:info@smkn2baleendah.sch.id"
+                    class="bg-pink-300 hover:bg-pink-400 p-4 rounded-xl block transition shadow btn-hover"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <p class="font-semibold">Email</p>
+                    <p class="text-sm">info@smkn2baleendah.sch.id</p>
+                </a>
+
+                <!-- MAP KECIL -->
+                <div class="bg-pink-300 hover:bg-pink-400 p-3 rounded-xl shadow transition btn-hover" data-aos="fade-up"
+                    data-aos-delay="150">
+                    <p class="font-semibold mb-2">Lokasi</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15848.772693591362!2d107.62437!3d-7.00181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e65c6d29f64b%3A0x77201ce39e73f764!2sSMKN%202%20Baleendah!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                        width="100%" height="120" style="border:0; border-radius:10px;" allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+
+            <p class="text-center text-pink-800 text-sm mt-8" data-aos="fade-up" data-aos-delay="200">
+                © 2025-2026 SMKN 2 Baleendah — All Rights Reserved
+            </p>
+
+        </div>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+    <!-- Script.js -->
+    <script>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("bg-black/80", "backdrop-blur-md", "shadow-lg");
+                navbar.classList.remove("bg-transparent");
+            } else {
+                navbar.classList.remove("bg-black/80", "backdrop-blur-md", "shadow-lg");
+                navbar.classList.add("bg-transparent");
+            }
+        });
+
+        // Hamburger Menu
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Parallax Background
+        const parallax = document.getElementById("parallax-bg");
+        window.addEventListener("scroll", () => {
+            if (!parallax) return;
+            const offset = window.scrollY * 0.4;
+            parallax.style.transform = `translateY(${offset}px)`;
+        });
+
+        // Tabs
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        // Default Active on Load
+        document.getElementById("tab-hair").classList.remove("hidden");
+        tabButtons[0].classList.add(
+            "bg-pink-500",
+            "text-white",
+            "border-pink-500",
+            "shadow-md",
+            "scale-105"
+        );
+
+        tabButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const target = btn.getAttribute("data-tab");
+                tabContents.forEach((content) => content.classList.add("hidden"));
+                document.getElementById(target).classList.remove("hidden");
+
+                tabButtons.forEach((b) => {
+                    b.classList.remove(
+                        "bg-pink-500",
+                        "text-white",
+                        "border-pink-500",
+                        "shadow-md",
+                        "scale-105"
+                    );
+                    b.classList.add("text-pink-600", "border-pink-500");
+                });
+
+                btn.classList.add(
+                    "bg-pink-500",
+                    "text-white",
+                    "border-pink-500",
+                    "shadow-md",
+                    "scale-105"
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>
